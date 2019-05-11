@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: a6bd9dffb44197546bf1bff0986c364c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bed
+    100002: Boek
+    100004: Bureau
+    100006: Computer
+    100008: DakenAchtermuur
+    100010: Klerenkast
+    100012: Linkermuur
+    100014: Matras1
+    100016: Muurkast
+    100018: Poster
+    100020: Reachtermuur
+    100022: //RootNode
+    100024: Schap
+    100026: Vloer
+    100028: Vloerkleed
+    400000: Bed
+    400002: Boek
+    400004: Bureau
+    400006: Computer
+    400008: DakenAchtermuur
+    400010: Klerenkast
+    400012: Linkermuur
+    400014: Matras1
+    400016: Muurkast
+    400018: Poster
+    400020: Reachtermuur
+    400022: //RootNode
+    400024: Schap
+    400026: Vloer
+    400028: Vloerkleed
+    2100000: lambert1
+    2300000: Bed
+    2300002: Boek
+    2300004: Bureau
+    2300006: Computer
+    2300008: DakenAchtermuur
+    2300010: Klerenkast
+    2300012: Linkermuur
+    2300014: Matras1
+    2300016: Muurkast
+    2300018: Poster
+    2300020: Reachtermuur
+    2300022: Schap
+    2300024: Vloer
+    2300026: Vloerkleed
+    3300000: Bed
+    3300002: Boek
+    3300004: Bureau
+    3300006: Computer
+    3300008: DakenAchtermuur
+    3300010: Klerenkast
+    3300012: Linkermuur
+    3300014: Matras1
+    3300016: Muurkast
+    3300018: Poster
+    3300020: Reachtermuur
+    3300022: Schap
+    3300024: Vloer
+    3300026: Vloerkleed
+    4300000: DakenAchtermuur
+    4300002: Vloer
+    4300004: Bureau
+    4300006: Schap
+    4300008: Klerenkast
+    4300010: Matras1
+    4300012: Muurkast
+    4300014: Linkermuur
+    4300016: Reachtermuur
+    4300018: Boek
+    4300020: Vloerkleed
+    4300022: Bed
+    4300024: Computer
+    4300026: Poster
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
