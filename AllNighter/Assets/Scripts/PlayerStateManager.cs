@@ -16,6 +16,9 @@ public class PlayerStateManager : MonoBehaviour
     //Setting the singelton
     public static PlayerStateManager instance = null;
 
+    //Refrences to importaint Managers
+    private PlayerStateManager playerState;
+
     void Awake()
     {
         if(instance == null)
@@ -24,7 +27,10 @@ public class PlayerStateManager : MonoBehaviour
         //If instance already exists and it's not this:
         else if(instance != this)
             Destroy(gameObject);
+
+        playerState = GetComponent<PlayerStateManager>();
     }
+
 
     private void Update()
     {
@@ -35,5 +41,6 @@ public class PlayerStateManager : MonoBehaviour
     {
 
     }
+
 
 }
