@@ -11,6 +11,8 @@ public class PlayerStateManager : MonoBehaviour
     //Basic player stats
     private float walkSpeed;
 
+    public float energy;
+
     //Setting the singelton
     public static PlayerStateManager instance = null;
 
@@ -22,6 +24,16 @@ public class PlayerStateManager : MonoBehaviour
         //If instance already exists and it's not this:
         else if(instance != this)
             Destroy(gameObject);
+    }
+
+    private void Update()
+    {
+        energy -= Time.deltaTime;
+    }
+
+    void EnergyDepleted()
+    {
+
     }
 
 }
