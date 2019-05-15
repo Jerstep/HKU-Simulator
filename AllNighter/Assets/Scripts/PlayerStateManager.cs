@@ -24,10 +24,6 @@ public class PlayerStateManager : MonoBehaviour
         if(instance == null)
             instance = this;
 
-        //If instance already exists and it's not this:
-        else if(instance != this)
-            Destroy(gameObject);
-
         playerState = GetComponent<PlayerStateManager>();
     }
 

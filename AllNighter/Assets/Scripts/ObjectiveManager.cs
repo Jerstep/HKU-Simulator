@@ -14,10 +14,6 @@ public class ObjectiveManager : MonoBehaviour
         if(instance == null)
             instance = this;
 
-        //If instance already exists and it's not this:
-        else if(instance != this)
-            Destroy(gameObject);
-
         objectiveCanvas = GameObject.FindGameObjectWithTag("objCanvas").GetComponent<Canvas>();
     }
 
