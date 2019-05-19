@@ -18,11 +18,12 @@ public class TimeManager : MonoBehaviour
 
 
     PlayerStateManager playerState;
+    ObjectiveManager objectiveManager;
 
-    // Start is called before the first frame update
     void Awake()
     {
         playerState = GetComponent<PlayerStateManager>();
+        objectiveManager = GetComponent<ObjectiveManager>();
     }
 
     void Update()
