@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public bool moveForward;
-    public bool moveBackward;
-    public bool moveLeft;
-    public bool moveRight;
+    public bool grounded;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(InputManager.GetKeyDown(""))
+        {
+
+        }
     }
 }

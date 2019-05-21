@@ -1,22 +1,72 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class InputManager : MonoBehaviour
+public static class InputManager
 {
-    public static InputManager instance = null;
+    //public static InputManager instance = null;
 
-    private PlayerMovement playerMovement;
+    //private PlayerMovement playerMovement;
 
-    void Awake()
+    static Dictionary<string, KeyCode> keyMapping;
+
+    static string[] keyMaps = new string[7]
     {
-        if(instance == null)
-            instance = this;
+        "Drink",
+        "Interact",
+        "Forward",
+        "Backward",
+        "Left",
+        "Right",
+        "Jump"
+    };
 
-        //If instance already exists and it's not this:
-        else if(instance != this)
-            Destroy(gameObject);
+    static KeyCode[] defaults = new KeyCode[7]
+    {
+        KeyCode.Q,
+        KeyCode.E,
+        KeyCode.W,
+        KeyCode.S,
+        KeyCode.A,
+        KeyCode.D,
+        KeyCode.Space
+    };
 
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+    static InputManager()
+    {
+        InitializeDictionary();
     }
+
+    private static void InitializeDictionary()
+    {
+        keyMapping = new Dictionary<string, KeyCode>();
+        for(int i = 0; i < keyMaps.Length; ++i)
+        {
+            keyMapping.Add(keyMaps[i], defaults[i]);
+        }
+    }
+
+    public static void SetKeyMap(string keyMap, KeyCode key)
+    {
+        if(!keyMapping.ContainsKey(keyMap))
+            throw new ArgumentException("Invalid KeyMap in SetKeyMap: " + keyMap);
+        keyMapping[keyMap] = key;
+    }
+
+    public static bool GetKeyDown(string keyMap)
+    {
+        return Input.GetKeyDown(keyMapping[keyMap]);
+    }
+
+    public static bool GetKeyUp(string keyMap)
+    {
+        return Input.GetKeyUp(keyMapping[keyMap]);
+    }
+
+    public static bool GetKey(string keyMap)
+    {
+        return Input.GetKey(keyMapping[keyMap]);
+    }
+
 }
