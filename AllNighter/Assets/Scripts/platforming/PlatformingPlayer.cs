@@ -8,7 +8,7 @@ public class PlatformingPlayer : MonoBehaviour
     public bool onGround;
     //jump
     float jumpheight = 6;
-    public float moveSpeed;
+    public float moveSpeed, jumpSpeed;
 
     //rigidbody
     private Rigidbody2D RigidPlayer;
@@ -22,6 +22,9 @@ public class PlatformingPlayer : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePos1, firePos2;
     public float lastMove;
+    public Transform startPos;
+
+    public float hp;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +35,11 @@ public class PlatformingPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(hp <= 0)
+        {
+            hp = 100;
+            transform.position = startPos.position;
+        }
         //left right
         if (Input.GetAxisRaw("Horizontal") > 0.5f  || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
@@ -46,7 +54,7 @@ public class PlatformingPlayer : MonoBehaviour
             if (onGround)
             {
                 //transform.Translate(new Vector3(0, Input.GetAxisRaw("Vertical")* moveSpeed * Time.deltaTime , 0));
-                RigidPlayer.velocity = new Vector2(RigidPlayer.velocity.x, Input.GetAxisRaw("Vertical") * moveSpeed);
+                RigidPlayer.velocity = new Vector2(RigidPlayer.velocity.x, Input.GetAxisRaw("Vertical") * jumpSpeed);
                 onGround = false;
                 //lastMove = new Vector2(0f, Input.GetAxisRaw("Vertical"));
             }
@@ -92,11 +100,13 @@ public class PlatformingPlayer : MonoBehaviour
 
         if (col.tag == "Enemy")
         {
-            
+            print("col");
+            transform.position = startPos.position;
         }
 
         if (col.tag == "EndPoint")
         {
+            //give points or something
             platformingSection.SetActive(false);
         }
     }
