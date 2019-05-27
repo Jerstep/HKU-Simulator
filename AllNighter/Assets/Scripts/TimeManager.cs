@@ -12,6 +12,8 @@ public class TimeManager : MonoBehaviour
     //Rotation Angles for sun
     public float xAngle, yAngle, zAngle;
 
+    private bool canRotate = false;
+
     public Text timeValueText, dayValueText;
     public Image energybar;
     public GameObject sun;
@@ -47,7 +49,13 @@ public class TimeManager : MonoBehaviour
 
     IEnumerator DayCycle()
     {
+        canRotate = true;
         yield return new WaitForSeconds(timeScale);
-        sun.transform.Rotate(xAngle, yAngle, zAngle);
+        if(canRotate)
+        {
+            sun.transform.Rotate(xAngle, yAngle, zAngle);
+            canRotate = false;
+        }
+        canRotate = false;
     }
 }

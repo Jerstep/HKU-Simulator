@@ -1707,14 +1707,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   daycount: 0
   time: 300
-  timeScale: 1
-  xAngle: 0
+  timeScale: 3
+  xAngle: 0.25
   yAngle: 0
   zAngle: 0
   timeValueText: {fileID: 774465668}
   dayValueText: {fileID: 323817481}
   energybar: {fileID: 2096081947}
-  sun: {fileID: 0}
+  sun: {fileID: 170076733}
 --- !u!1 &709691370
 GameObject:
   m_ObjectHideFlags: 0
