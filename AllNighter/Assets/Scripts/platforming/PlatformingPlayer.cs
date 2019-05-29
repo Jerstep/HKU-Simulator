@@ -25,6 +25,7 @@ public class PlatformingPlayer : MonoBehaviour
     public Transform startPos;
 
     public float hp;
+    public float rayRange = 100f;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,14 @@ public class PlatformingPlayer : MonoBehaviour
             hp = 100;
             transform.position = startPos.position;
         }
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.transform.name);
+
+        }
+
         //left right
         if (Input.GetAxisRaw("Horizontal") > 0.5f  || Input.GetAxisRaw("Horizontal") < -0.5f)
         {

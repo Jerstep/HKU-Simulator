@@ -36,8 +36,8 @@ public class SpeedEnemy : MonoBehaviour
     private void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")
-        {
-            col.GetComponent<PlatformingPlayer>().RestartPos();
+        {         
+            col.GetComponentInParent<PlatformingPlayer>().RestartPos();
         }
 
     }
