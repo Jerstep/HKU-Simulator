@@ -91,6 +91,11 @@ public class PlatformingPlayer : MonoBehaviour
         */
     }
 
+    public void RestartPos()
+    {
+        transform.position = startPos.position;
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.tag == "Ground")
@@ -101,7 +106,7 @@ public class PlatformingPlayer : MonoBehaviour
         if (col.tag == "Enemy")
         {
             print("col");
-            transform.position = startPos.position;
+            RestartPos();
         }
 
         if (col.tag == "EndPoint")
