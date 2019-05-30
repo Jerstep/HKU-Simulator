@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public Camera camera;
 
+    bool isBehindPc = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();

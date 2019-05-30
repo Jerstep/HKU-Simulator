@@ -16,17 +16,11 @@ public class PlayerStateManager : MonoBehaviour
     //Setting the singelton
     public static PlayerStateManager instance = null;
 
-    //Refrences to importaint Managers
-    private PlayerStateManager playerState;
-
     void Awake()
     {
         if(instance == null)
             instance = this;
-
-        playerState = GetComponent<PlayerStateManager>();
     }
-
 
     private void Update()
     {
