@@ -77,6 +77,12 @@ public class Movement : MonoBehaviour
 
         Walk(dir);
 
+        if (hp <= 0)
+        {
+            hp = 100;
+            transform.position = startPos.position;
+        }
+
         if (coll.onWall && Input.GetButton("Fire3") && canMove)
         {
             if(side != coll.wallSide)

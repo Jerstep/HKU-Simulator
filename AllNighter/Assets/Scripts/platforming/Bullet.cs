@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
 
         if (other.tag == "Player" && enemyBullet)
         {
-            other.GetComponent<PlatformingPlayer>().hp -= 10;
+            other.GetComponentInParent<Movement>().hp -= 10;
             Destroy(gameObject);
         }
     }
