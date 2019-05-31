@@ -15,4 +15,9 @@ public class CoffeeManager : MonoBehaviour
         if(instance == null)
             instance = this;
     }
+
+    void EnergyRefill()
+    {
+
+    }
 }

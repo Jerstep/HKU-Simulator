@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - EndPoint
   - Activator
+  - Energy
   layers:
   - Default
   - TransparentFX
