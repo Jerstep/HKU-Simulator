@@ -57,6 +57,7 @@ public class Collision : MonoBehaviour
     public void RestartPos()
     {
         transform.position = GetComponent<Movement>().startPos.position;
+        GetComponent<Movement>().hp = 100;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
