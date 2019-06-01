@@ -4,12 +4,31 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Box001
+    100004: monitor
     400000: //RootNode
+    400002: Box001
+    400004: monitor
     2100000: monitorLambert
     2300000: //RootNode
+    2300002: Box001
+    2300004: monitor
     3300000: //RootNode
+    3300002: Box001
+    3300004: monitor
     4300000: monitor
-  externalObjects: {}
+    4300002: Box001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 64ae2bea572a10e4d963b61f1e0315fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: monitorLambert
+    second: {fileID: 2100000, guid: df5102838f0267847ad4756b3814fa35, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
