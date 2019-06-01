@@ -9,12 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: speaker
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: speakerLambert
-    second: {fileID: 2100000, guid: e8cb3d781a7f2714db08384b2fb88dd9, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 1
@@ -54,7 +49,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
