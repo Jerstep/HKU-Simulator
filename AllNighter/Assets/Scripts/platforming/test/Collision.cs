@@ -67,6 +67,11 @@ public class Collision : MonoBehaviour
             print("col");
             RestartPos();
         }
+        if (collision.tag == "KillBox")
+        {
+            print("col");
+            RestartPos();
+        }
 
         if (collision.tag == "EndPoint")
         {
