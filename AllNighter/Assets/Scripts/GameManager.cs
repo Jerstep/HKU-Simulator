@@ -2,22 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-    
+    private int previousScene;
+
     void Awake()
     {
+        instance = this;
         DontDestroyOnLoad(this.gameObject);
+    }
 
-        /* 
-         if (instance == null)
-             instance = this;
+    void OnClickLoadSceneButton(int sceneIndex)
+    {
+        previousScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneIndex);
+    }
 
-         else if(instance != this)
-             Destroy(instance.gameObject);
-             instance = this;
-        */
+    public void LoadPreviousScene()
+    {
+        SceneManager.LoadScene(previousScene);
     }
 }
