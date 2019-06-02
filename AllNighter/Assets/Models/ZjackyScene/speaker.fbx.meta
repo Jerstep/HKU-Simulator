@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: speakerLambert
-    second: {fileID: 2100000, guid: e8cb3d781a7f2714db08384b2fb88dd9, type: 2}
+    second: {fileID: 2100000, guid: 2350d1bf0ec97a541a7abfcd04654287, type: 2}
   materials:
     importMaterials: 1
     materialName: 1

@@ -26,7 +26,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: desklampLambert
-    second: {fileID: 2100000, guid: 06168750f6dff6a41961b3334cefa9fe, type: 2}
+    second: {fileID: 2100000, guid: c6b417b68b77fd942859bda3d3e75932, type: 2}
   materials:
     importMaterials: 1
     materialName: 1

@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: iphoneLambert
-    second: {fileID: 2100000, guid: 6a2fe4a1a99cd7a4c9b22e2ffda1d770, type: 2}
+    second: {fileID: 2100000, guid: d32169c7f9c60ed438a158bdf624fa35, type: 2}
   materials:
     importMaterials: 1
     materialName: 1

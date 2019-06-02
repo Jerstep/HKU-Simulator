@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: kasten
-    second: {fileID: 2100000, guid: 02efdaf4594fac448a67efb89101dab7, type: 2}
+    second: {fileID: 2100000, guid: ffaad58b167528849803fba2ab48d465, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
