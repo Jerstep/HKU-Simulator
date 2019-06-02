@@ -21,7 +21,12 @@ ModelImporter:
     4300000: desklampBody
     4300002: desklampBulb
     4300004: desklampButton
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: desklampLambert
+    second: {fileID: 2100000, guid: 06168750f6dff6a41961b3334cefa9fe, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
@@ -61,7 +66,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
