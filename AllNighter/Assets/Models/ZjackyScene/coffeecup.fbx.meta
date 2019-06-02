@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: coffeecupLambert
-    second: {fileID: 2100000, guid: ddede20f586905b4d95485ff2151e3ce, type: 2}
+    second: {fileID: 2100000, guid: 32e803774177bcf44b88b954877678c9, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
@@ -69,7 +69,7 @@ ModelImporter:
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 54
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
