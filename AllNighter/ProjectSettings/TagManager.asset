@@ -11,6 +11,7 @@ TagManager:
   - Activator
   - Energy
   - KillBox
+  - PlatformingPlayer
   layers:
   - Default
   - TransparentFX
