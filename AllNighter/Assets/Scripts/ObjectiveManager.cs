@@ -6,6 +6,7 @@ public class ObjectiveManager : MonoBehaviour
 {
     //Setting the singelton
     public static ObjectiveManager instance = null;
+    GameManager gameManager;
 
     private Canvas objectiveCanvas;
 
@@ -13,6 +14,8 @@ public class ObjectiveManager : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
+        gameManager = GetComponent<GameManager>();
         objectives = GetComponents<Objective>();
     }
 
