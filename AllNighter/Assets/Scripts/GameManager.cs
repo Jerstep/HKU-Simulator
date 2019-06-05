@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public PlayerMovement playerMovement;
+
     private int previousScene;
 
     void Awake()
@@ -24,5 +26,10 @@ public class GameManager : MonoBehaviour
     public void LoadPreviousScene()
     {
         SceneManager.LoadScene(previousScene);
+    }
+
+    public void BehindPc()
+    {
+        playerMovement.isBehindPc = true;
     }
 }
