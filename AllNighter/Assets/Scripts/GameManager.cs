@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     private int previousScene;
 
-    public float energy;
+    public float energy = 100;
 
     void Awake()
     {
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     void EnergyDepleted()
     {
-
+    }
 
     public void BehindPc()
     {

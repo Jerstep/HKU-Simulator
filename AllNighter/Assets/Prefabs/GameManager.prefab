@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 3260072399337350178}
   - component: {fileID: 1356966767}
   - component: {fileID: 1356966773}
+  - component: {fileID: 2347943920813620092}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -141,6 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  energy: 100
 --- !u!114 &3260072399337350177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,15 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9344c730e99e0c4894dbe6956c00c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  daycount: 0
-  time: 300
   timeScale: 3
   xAngle: 0.25
   yAngle: 0
   zAngle: 0
-  timeValueText: {fileID: 0}
-  dayValueText: {fileID: 0}
-  energybar: {fileID: 0}
   sun: {fileID: 0}
 --- !u!114 &1356966767
 MonoBehaviour:
@@ -193,6 +190,7 @@ MonoBehaviour:
   objectives_UI: {fileID: 0}
   objectives:
   - {fileID: 1860760825}
+  progress: 0
 --- !u!114 &1356966773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,3 +203,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3623fd4f2c6996e4f9d29c6471dabaf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2347943920813620092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260072399337350183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c544a4d8c296d434f8f5412925de9efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeValueText: {fileID: 0}
+  energybar: {fileID: 0}
+  progressbar: {fileID: 0}
+  time: 300
