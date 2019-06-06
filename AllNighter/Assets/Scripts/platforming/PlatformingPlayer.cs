@@ -24,7 +24,6 @@ public class PlatformingPlayer : MonoBehaviour
     public float lastMove;
     public Transform startPos;
 
-    public float hp;
     public float rayRange = 100f;
 
     // Start is called before the first frame update
@@ -36,11 +35,6 @@ public class PlatformingPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(hp <= 0)
-        {
-            hp = 100;
-            transform.position = startPos.position;
-        }
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
         if (hit.collider != null)

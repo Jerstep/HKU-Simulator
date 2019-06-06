@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     public Camera camera;
 
-    bool isBehindPc = false;
+    public bool isBehindPc = false;
 
     private void Start()
     {

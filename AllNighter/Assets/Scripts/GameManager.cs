@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     private int previousScene;
 
+    public float energy;
+
     void Awake()
     {
         instance = this;
@@ -21,8 +23,18 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
+    private void Update()
+    {
+        energy -= Time.deltaTime;
+    }
+
     public void LoadPreviousScene()
     {
         SceneManager.LoadScene(previousScene);
+    }
+
+    void EnergyDepleted()
+    {
+
     }
 }

@@ -12,6 +12,8 @@ public class ObjectiveManager : MonoBehaviour
 
     public Objective[] objectives;
 
+    public int progress;
+
     void Awake()
     {
         instance = this;
@@ -37,5 +39,10 @@ public class ObjectiveManager : MonoBehaviour
                 Destroy(objective);
             }
         }
+    }
+
+    public void addProgress(int addAmount)
+    {
+        progress = +addAmount;
     }
 }
