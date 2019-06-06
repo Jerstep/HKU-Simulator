@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance = null;
+    public static GameManager instance;
+    public PlayerMovement playerMovement;
+
     private int previousScene;
 
     public float energy;
@@ -33,8 +35,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(previousScene);
     }
 
+
     void EnergyDepleted()
     {
 
+
+    public void BehindPc()
+    {
+        playerMovement.isBehindPc = true;
     }
 }

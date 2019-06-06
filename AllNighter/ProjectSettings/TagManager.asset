@@ -10,8 +10,8 @@ TagManager:
   - EndPoint
   - Activator
   - Energy
-  - KillBox
   - PlatformingPlayer
+  - KillBox
   layers:
   - Default
   - TransparentFX

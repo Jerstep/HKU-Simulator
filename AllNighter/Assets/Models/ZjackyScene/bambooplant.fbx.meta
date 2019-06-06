@@ -12,7 +12,17 @@ ModelImporter:
     4300000: bamboo
     7400000: Take 001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bambooLambert
+    second: {fileID: 2100000, guid: e51555a77bf3b2145a9bb7f4a602f327, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: c772c0c80e250ab4db0cef35c1f84588, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
@@ -52,7 +62,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
