@@ -51,6 +51,11 @@ public class Movement : MonoBehaviour
     public float hp;
     public Transform startPos;
 
+    //animations
+    private Animator anim;
+
+    public bool moving, shooting, jumping;
+
     /*[Space]
     [Header("Polish")]
     public ParticleSystem dashParticle;
@@ -63,6 +68,7 @@ public class Movement : MonoBehaviour
     {
         coll = GetComponent<Collision>();
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
     }
 
@@ -76,6 +82,14 @@ public class Movement : MonoBehaviour
         Vector2 dir = new Vector2(x, y);
 
         Walk(dir);
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        {
+            moving = true;
+        }
+        else
+        {
+            moving = false;
+        }
 
         if (hp <= 0)
         {
@@ -172,6 +186,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
+            shooting = true;
             if (side < -0.1f)
             {
                 Instantiate(bulletPrefab, firePos2.position, firePos2.rotation);
@@ -181,6 +196,16 @@ public class Movement : MonoBehaviour
                 Instantiate(bulletPrefab, firePos1.position, firePos1.rotation);
             }
         }
+        else if (Input.GetKeyUp(KeyCode.E))
+        {
+            shooting = false;
+        }
+
+
+        anim.SetFloat("MoveX", side);
+        anim.SetBool("Moving", moving);
+        anim.SetBool("Shooting", shooting);
+        anim.SetBool("Jump", jumping);
 
     }
 
@@ -188,6 +213,7 @@ public class Movement : MonoBehaviour
     {
         hasDashed = false;
         isDashing = false;
+        jumping = false;
     }
 
     private void Dash(float x, float y)
@@ -270,6 +296,7 @@ public class Movement : MonoBehaviour
         if (!wallJumped)
         {
             rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
+            
         }
         else
         {
@@ -279,7 +306,7 @@ public class Movement : MonoBehaviour
 
     private void Jump(Vector2 dir, bool wall)
     {
-
+        jumping = true;
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity += dir * jumpForce;
     }

@@ -11,7 +11,7 @@ public static class InputManager
 
     static Dictionary<string, KeyCode> keyMapping;
 
-    static string[] keyMaps = new string[7]
+    static string[] keyMaps = new string[8]
     {
         "Drink",
         "Interact",
@@ -19,10 +19,11 @@ public static class InputManager
         "Backward",
         "Left",
         "Right",
-        "Jump"
+        "Jump",
+        "Quit"
     };
 
-    static KeyCode[] defaults = new KeyCode[7]
+    static KeyCode[] defaults = new KeyCode[8]
     {
         KeyCode.Q,
         KeyCode.E,
@@ -30,7 +31,8 @@ public static class InputManager
         KeyCode.S,
         KeyCode.A,
         KeyCode.D,
-        KeyCode.Space
+        KeyCode.Space,
+        KeyCode.Escape
     };
 
     static InputManager()

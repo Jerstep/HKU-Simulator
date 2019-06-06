@@ -33,12 +33,12 @@ public class SpeedEnemy : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (col.tag == "Player")
-        {         
-            col.GetComponentInParent<PlatformingPlayer>().RestartPos();
+        if (collision.tag == "PlatformingPlayer")
+        {
+            Destroy(gameObject);
         }
-
+        
     }
 }

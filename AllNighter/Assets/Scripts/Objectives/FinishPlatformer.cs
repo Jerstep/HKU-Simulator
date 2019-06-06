@@ -1,19 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FinishPlatformer : Objective
 {
     //Pure Testing
 
-    public bool hasFinishedPlatformer;
+    public bool hasFinishedPlatformer = false;
     public AudioClip trumpetSound;
 
-    ProgressManager progressManager;
+    [Header("UI texts that shows up in game")]
+    public string objectiveName;
+    public string objectiveDiscription;
+
+    ObjectiveManager objectiveManager;
 
     void Awake()
     {
-        progressManager = GetComponent<ProgressManager>();
+        objectiveManager = GetComponent<ObjectiveManager>();
     }
 
     public override bool IsAchieved()
@@ -23,12 +28,20 @@ public class FinishPlatformer : Objective
 
     public override void Complete()
     {
-        progressManager.addProgress(20);
+        objectiveManager.addProgress(20);
         GetComponent<AudioSource>().PlayOneShot(trumpetSound);
     }
 
-    public override void DrawHUD()
+    public override void DrawHUD(GameObject objective_UI)
     {
-        GUILayout.Label(string.Format("Finished Cource {0}", hasFinishedPlatformer));
+        //GUILayout.Label(string.Format("Finished Cource {0}", hasFinishedPlatformer));
+        TMP_Text[] objectiveUIText = objective_UI.GetComponentsInChildren<TMP_Text>();
+        objectiveUIText[0].text = objectiveName;
+        objectiveUIText[1].text = objectiveDiscription;
     }
 }
+
+/* Finish the platformer:
+ *  Got to your pc and playtest the game;
+  
+ */

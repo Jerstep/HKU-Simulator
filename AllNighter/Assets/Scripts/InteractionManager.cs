@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class InteractionManager : MonoBehaviour
 {
-    Camera cam;
-    float interactDistance = 3f;    
+    public Camera cam;
+    float interactDistance = 3f;
 
-    void Start()
+    GameManager gameManager;
+
+    void Awake()
     {
-        cam = FindObjectOfType<Camera>();
+        //cam = FindObjectOfType<Camera>();
+        gameManager = GetComponent<GameManager>();
     }
 
     void Update()
     {
         RayCast();
+
+        if(InputManager.GetKeyDown("Quit"))
+        {
+            gameManager.LeftPc();
+        }           
     }
 
     private void RayCast()
@@ -26,11 +34,22 @@ public class InteractionManager : MonoBehaviour
 
         if(Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, interactDistance, layerMask))
         {
-            //print("I'm looking at " + hit.transform.name);
+            print("I'm looking at " + hit.transform.name);
 
             if(hit.transform.CompareTag("Energy"))
             {
+                if(InputManager.GetKeyDown("Interact"))
+                {
 
+                }
+            }
+
+            if(hit.transform.CompareTag("PC"))
+            {
+                if(InputManager.GetKeyDown("Interact"))
+                {
+                    gameManager.BehindPc();
+                }
             }
         }
         else

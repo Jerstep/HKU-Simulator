@@ -17,33 +17,33 @@ MonoBehaviour:
   vectorField: {fileID: 11700000, guid: 08937e3134903c5488be506a2dac71e9, type: 2}
   signedDistanceField: {fileID: 11700000, guid: 5c2949c31aafddd4e8011ffdebb8fdf7,
     type: 2}
-  mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
   animationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.0011291504
-      inSlope: 2
-      outSlope: 2
+      value: 0
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.23028973
-      value: 0.34616375
-      inSlope: -0.0034875795
-      outSlope: -0.0034875795
+      time: 0.25
+      value: 0.25
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.5001992
-      value: 0.0028672516
-      inSlope: -3.0686173
-      outSlope: -3.0686173
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0

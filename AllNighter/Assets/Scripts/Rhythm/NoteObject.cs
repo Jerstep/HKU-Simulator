@@ -9,6 +9,7 @@ public class NoteObject : MonoBehaviour
     public KeyCode keyToPress;
     public GameObject hitEffect, goodEffect, perfectEffect, missEffect;
 
+    public bool isEnergyNote;
 
     // Start is called before the first frame update
     void Start()
@@ -23,25 +24,27 @@ public class NoteObject : MonoBehaviour
         {
             if (canBePressed)
             {
+                
                 gameObject.SetActive(false);
 
                 //RhythmGameManager.instance.NoteHit();
                 if (Mathf.Abs(transform.position.y) > 0.25)
                 {
                     Debug.Log("hit");
-                    RhythmGameManager.instance.NormalHit();
+                    RhythmGameManager.instance.NormalHit(isEnergyNote);
                     Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
+                    
                 }
                 else if(Mathf.Abs(transform.position.y) > 0.05f)
                 {
                     Debug.Log("good");
-                    RhythmGameManager.instance.GoodHit();
+                    RhythmGameManager.instance.GoodHit(isEnergyNote);
                     Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
                 }
                 else
                 {
                     Debug.Log("perfect");
-                    RhythmGameManager.instance.PerfectHit();
+                    RhythmGameManager.instance.PerfectHit(isEnergyNote);
                     Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
                 }
             }
