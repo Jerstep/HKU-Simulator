@@ -41,7 +41,10 @@ public class InteractionManager : MonoBehaviour
 
             if(hit.transform.CompareTag("PC"))
             {
-                gameManager.BehindPc();
+                if(InputManager.GetKeyDown("Interact"))
+                {
+                    gameManager.BehindPc();
+                }
             }
         }
         else

@@ -10,6 +10,7 @@ TagManager:
   - EndPoint
   - Activator
   - Energy
+  - PC
   layers:
   - Default
   - TransparentFX

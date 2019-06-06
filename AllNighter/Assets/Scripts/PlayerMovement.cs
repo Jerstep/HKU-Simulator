@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 rotation = Vector2.zero;
 
     public Transform pcSnapPosition;
+    public Canvas myCanvas;
+    public Image cursor;
 
     private void Start()
     {
@@ -53,5 +56,9 @@ public class PlayerMovement : MonoBehaviour
     public void PcMove()
     {
         this.transform.position = pcSnapPosition.position;
+
+        Vector2 pos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out pos);
+        cursor.transform.position = myCanvas.transform.TransformPoint(pos);
     }
 }
