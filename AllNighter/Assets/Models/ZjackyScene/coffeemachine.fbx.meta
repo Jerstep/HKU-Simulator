@@ -16,7 +16,12 @@ ModelImporter:
     3300002: coffeemachineKlepje
     4300000: coffeemachineBody
     4300002: coffeemachineKlepje
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coffeemachineLambert
+    second: {fileID: 2100000, guid: e4d944137917c0b4db5b73b619274de5, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
@@ -56,7 +61,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
