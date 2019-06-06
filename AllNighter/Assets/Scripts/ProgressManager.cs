@@ -5,12 +5,8 @@ using UnityEngine.UI;
 
 public class ProgressManager : MonoBehaviour
 {
-    private int progress;
-    public Image progressBar;
 
-    public void addProgress(int addAmount)
-    {
-        progress =+ addAmount;
-    }
+
+   
 
 }

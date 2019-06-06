@@ -1,5 +1,84 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1176502301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176502302}
+  m_Layer: 0
+  m_Name: Objectives
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1176502302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176502301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1860760826}
+  m_Father: {fileID: 3260072399337350182}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1860760824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860760826}
+  - component: {fileID: 1860760825}
+  m_Layer: 0
+  m_Name: FinishPlatformer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1860760826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860760824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1176502302}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1860760825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860760824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617562cde16a48347a3f55cd918b1461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasFinishedPlatformer: 0
+  trumpetSound: {fileID: 0}
+  objectiveName: Get To Tha Choppa
+  objectiveDiscription: Get to your pc and klick that fucking button before you fucking
+    die boiiiiiiii!!! RUNNNN
 --- !u!1 &3260072399337350183
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +92,9 @@ GameObject:
   - component: {fileID: 3260072399337350176}
   - component: {fileID: 3260072399337350177}
   - component: {fileID: 3260072399337350178}
+  - component: {fileID: 1356966767}
+  - component: {fileID: 1356966773}
+  - component: {fileID: 2347943920813620092}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -30,7 +112,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 34.60841, y: 2.4040759, z: 33.66722}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1176502302}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -58,6 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d6fff27dee4074b9aa6c01beabcbd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 0}
+  energy: 100
 --- !u!114 &3260072399337350177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,13 +168,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9344c730e99e0c4894dbe6956c00c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  daycount: 0
-  time: 300
   timeScale: 3
   xAngle: 0.25
   yAngle: 0
   zAngle: 0
-  timeValueText: {fileID: 0}
-  dayValueText: {fileID: 0}
-  energybar: {fileID: 0}
   sun: {fileID: 0}
+--- !u!114 &1356966767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260072399337350183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8de2d8dd41e15c4c81f29410c84b5b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objective_UI: {fileID: 1791271503106171044, guid: 53b45d70d2f6e404c9231091953e9016,
+    type: 3}
+  objectives_UI: {fileID: 0}
+  objectives:
+  - {fileID: 1860760825}
+  progress: 0
+--- !u!114 &1356966773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260072399337350183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3623fd4f2c6996e4f9d29c6471dabaf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2347943920813620092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3260072399337350183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c544a4d8c296d434f8f5412925de9efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeValueText: {fileID: 0}
+  energybar: {fileID: 0}
+  progressbar: {fileID: 0}
+  time: 300

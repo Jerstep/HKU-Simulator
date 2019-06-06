@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
 
     private int previousScene;
 
+    public float energy = 100;
+    public float fullEnergy = 100;
+
     void Awake()
     {
         instance = this;
@@ -23,13 +26,28 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
+    private void Update()
+    {
+        energy -= Time.deltaTime;
+    }
+
     public void LoadPreviousScene()
     {
         SceneManager.LoadScene(previousScene);
     }
 
+
+    void EnergyDepleted()
+    {
+    }
+
     public void BehindPc()
     {
         playerMovement.isBehindPc = true;
+    }
+
+    public void LeftPc()
+    {
+        playerMovement.isBehindPc = false;
     }
 }

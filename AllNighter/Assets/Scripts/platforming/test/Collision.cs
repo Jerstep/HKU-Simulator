@@ -24,10 +24,14 @@ public class Collision : MonoBehaviour
     public Vector2 bottomOffset, rightOffset, leftOffset;
     private Color debugCollisionColor = Color.red;
 
+    ObjectiveManager objective;
+    GameManager gameMan;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        objective = GameObject.Find("GameManager").GetComponent<ObjectiveManager>();
+        gameMan = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -67,10 +71,21 @@ public class Collision : MonoBehaviour
             print("col");
             RestartPos();
         }
+        if (collision.tag == "KillBox")
+        {
+            print("col");
+            RestartPos();
+        }
+
+        if (collision.tag == "Refill-PickUp")
+        {
+            gameMan.energy = gameMan.fullEnergy;
+            Destroy(collision.gameObject);
+        }
 
         if (collision.tag == "EndPoint")
         {
-            //give points or something
+            objective.addProgress(20);
             GetComponent<Movement>().platformingSection.SetActive(false);
         }
     }

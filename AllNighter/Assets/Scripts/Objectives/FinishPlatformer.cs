@@ -14,11 +14,11 @@ public class FinishPlatformer : Objective
     public string objectiveName;
     public string objectiveDiscription;
 
-    ProgressManager progressManager;
+    ObjectiveManager objectiveManager;
 
     void Awake()
     {
-        progressManager = GetComponent<ProgressManager>();
+        objectiveManager = GetComponent<ObjectiveManager>();
     }
 
     public override bool IsAchieved()
@@ -28,7 +28,7 @@ public class FinishPlatformer : Objective
 
     public override void Complete()
     {
-        progressManager.addProgress(20);
+        objectiveManager.addProgress(20);
         GetComponent<AudioSource>().PlayOneShot(trumpetSound);
     }
 

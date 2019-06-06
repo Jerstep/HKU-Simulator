@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class InteractionManager : MonoBehaviour
 {
-    Camera cam;
+    public Camera cam;
     float interactDistance = 3f;
 
     GameManager gameManager;
 
     void Awake()
     {
-        cam = FindObjectOfType<Camera>();
+        //cam = FindObjectOfType<Camera>();
         gameManager = GetComponent<GameManager>();
     }
 
     void Update()
     {
         RayCast();
+
+        if(InputManager.GetKeyDown("Quit"))
+        {
+            gameManager.LeftPc();
+        }           
     }
 
     private void RayCast()

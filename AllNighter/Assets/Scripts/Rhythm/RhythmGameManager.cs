@@ -28,13 +28,15 @@ public class RhythmGameManager : MonoBehaviour
     public GameObject resultsScreen;
     public Text percentHitText, normalText, goodText, perfectText, missesText, rankText, finalScoreText;
 
+    GameManager gameMan;
+
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         scoreText.text = "Score: " + 0;
         currentMultiplier = 1;
-
+        gameMan = GameObject.Find("GameManager").GetComponent <GameManager>();
         totalNotes = FindObjectsOfType<NoteObject>().Length;
     }
 
@@ -115,26 +117,39 @@ public class RhythmGameManager : MonoBehaviour
         scoreText.text = "Score: " + currentScore;
     }
 
-    public void NormalHit()
+    public void NormalHit(bool isEnergy)
     {
+        if (isEnergy)
+        {
+            gameMan.energy += 5;
+        }
         currentScore += scorePerNote * currentMultiplier;
         normalHits++;
         NoteHit();
     }
 
-    public void GoodHit()
+    public void GoodHit(bool isEnergy)
     {
+        if (isEnergy)
+        {
+            gameMan.energy += 10;
+        }
         currentScore += scorePerGoodNote * currentMultiplier;
         goodHits++;
         NoteHit();
     }
 
-    public void PerfectHit()
+    public void PerfectHit(bool isEnergy)
     {
+        if (isEnergy)
+        {
+            gameMan.energy += 20;
+        }
         currentScore += scorePerPerfectNote * currentMultiplier;
         perfectHits++;
         NoteHit();
     }
+
 
     public void NoteMiss()
     {
