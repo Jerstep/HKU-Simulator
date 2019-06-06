@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 rotation = Vector2.zero;
 
     public Transform pcSnapPosition;
+    public Transform camPlayerPos;
+    public Transform camPCPos;
+
     public Canvas myCanvas;
     public Image cursor;
 
@@ -29,11 +32,15 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         if(!isBehindPc)
+        {
             Move();
+            Debug.Log("Move Active");
+        }            
         else
+        {
             PcMove();
-
-        Look();
+            Debug.Log("PCMove Active");
+        }
     }
 
     public void Look() // Look rotation (UP down is Camera) (Left right is Transform rotation)
@@ -47,20 +54,30 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move()
     {
+        Look();
+        camera.transform.position = camPlayerPos.position;
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rb.AddRelativeForce(movement * speed);
+        rb.constraints = RigidbodyConstraints.None;
+        rb.useGravity = true;
     }
 
     public void PcMove()
     {
+        camera.transform.position = camPCPos.position;
+        camera.transform.rotation = camPCPos.rotation;
+
         this.transform.position = pcSnapPosition.position;
 
         Vector2 pos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out pos);
         cursor.transform.position = myCanvas.transform.TransformPoint(pos);
+        rb.constraints = RigidbodyConstraints.FreezePositionZ;
+        rb.useGravity = false;
     }
 }
