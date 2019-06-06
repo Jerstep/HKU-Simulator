@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private int previousScene;
 
     public float energy = 100;
+    public float fullEnergy = 100;
 
     void Awake()
     {
