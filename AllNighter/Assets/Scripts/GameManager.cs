@@ -45,4 +45,9 @@ public class GameManager : MonoBehaviour
     {
         playerMovement.isBehindPc = true;
     }
+
+    public void LeftPc()
+    {
+        playerMovement.isBehindPc = false;
+    }
 }
