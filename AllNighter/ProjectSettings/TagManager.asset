@@ -12,6 +12,7 @@ TagManager:
   - Energy
   - PlatformingPlayer
   - KillBox
+  - PC
   layers:
   - Default
   - TransparentFX
