@@ -7,26 +7,31 @@ ModelImporter:
     100002: desklampBulb
     100004: desklampButton
     100006: //RootNode
+    100008: desklampV2
     400000: desklampBody
     400002: desklampBulb
     400004: desklampButton
     400006: //RootNode
+    400008: desklampV2
     2100000: desklampLambert
     2300000: desklampBody
     2300002: desklampBulb
     2300004: desklampButton
+    2300006: desklampV2
     3300000: desklampBody
     3300002: desklampBulb
     3300004: desklampButton
+    3300006: desklampV2
     4300000: desklampBody
     4300002: desklampBulb
     4300004: desklampButton
+    4300006: desklampV2
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: desklampLambert
-    second: {fileID: 2100000, guid: c6b417b68b77fd942859bda3d3e75932, type: 2}
+    second: {fileID: 2100000, guid: 0e13bad20b0f1fc42b19e85d7564ea1e, type: 2}
   materials:
     importMaterials: 1
     materialName: 1

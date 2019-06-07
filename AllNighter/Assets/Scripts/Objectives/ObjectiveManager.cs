@@ -12,7 +12,7 @@ public class ObjectiveManager : MonoBehaviour
     public GameObject objective_UI;
     public GameObject objectives_UI;
 
-    public Objective[] objectives;
+    public List<Objective> objectives;
 
     public int progress;
 
@@ -20,7 +20,6 @@ public class ObjectiveManager : MonoBehaviour
     {
         //instance = this;
         gameManager = GetComponent<GameManager>();
-        objectives = GetComponents<Objective>();
         objectiveCanvas = FindObjectOfType<Canvas>();
     }
 
@@ -36,7 +35,7 @@ public class ObjectiveManager : MonoBehaviour
 
     void Update()
     {
-        foreach(var objective in objectives)
+        foreach(Objective objective in objectives)
         {
             if(objective.IsAchieved())
             {
@@ -48,6 +47,6 @@ public class ObjectiveManager : MonoBehaviour
 
     public void addProgress(int addAmount)
     {
-        progress = +addAmount;
+        progress =+ addAmount;
     }
 }

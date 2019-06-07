@@ -6,17 +6,27 @@ ModelImporter:
     100000: //RootNode
     100002: trashBody
     100004: trashLid
+    100006: trash 1
     400000: //RootNode
     400002: trashBody
     400004: trashLid
+    400006: trash 1
     2100000: trashLambert
     2300000: trashBody
     2300002: trashLid
+    2300004: trash 1
     3300000: trashBody
     3300002: trashLid
+    3300004: trash 1
     4300000: trashLid
     4300002: trashBody
-  externalObjects: {}
+    4300004: trash
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trashLambert
+    second: {fileID: 2100000, guid: c92900c00ea393846b9fca85f6286fb8, type: 2}
   materials:
     importMaterials: 1
     materialName: 1

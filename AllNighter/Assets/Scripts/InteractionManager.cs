@@ -34,7 +34,7 @@ public class InteractionManager : MonoBehaviour
 
         if(Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, interactDistance, layerMask))
         {
-            print("I'm looking at " + hit.transform.name);
+            //print("I'm looking at " + hit.transform.name);
 
             if(hit.transform.CompareTag("Energy"))
             {
@@ -54,7 +54,7 @@ public class InteractionManager : MonoBehaviour
         }
         else
         {
-            print("I'm looking at nothing!");
+            //print("I'm looking at nothing!");
         }
         Debug.DrawRay(cam.transform.position, cam.transform.TransformDirection(Vector3.forward) * interactDistance, Color.red);
     }    
