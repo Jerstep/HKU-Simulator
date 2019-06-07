@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: 1eaddce5f269a7045aee0b41af7df067
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: canCrusty
+    100002: canCrusty1
+    100004: canCrusty2
+    100006: canCrusty3
+    100008: canCrustyground
+    100010: canCrustyground 1
+    100012: canCrustyground1
+    100014: canCrustyground2
+    100016: canCrustyground3
+    100018: canCrustyground4
+    100020: canCrustyground5
+    100022: canCrustyground6
+    100024: canCrustyground7
+    100026: canWhole
+    100028: canWhole1
+    100030: canWhole2
+    100032: canWhole3
+    100034: canWhole4
+    100036: canWhole5
+    100038: //RootNode
+    100040: pCube1
+    400000: canCrusty
+    400002: canCrusty1
+    400004: canCrusty2
+    400006: canCrusty3
+    400008: canCrustyground
+    400010: canCrustyground 1
+    400012: canCrustyground1
+    400014: canCrustyground2
+    400016: canCrustyground3
+    400018: canCrustyground4
+    400020: canCrustyground5
+    400022: canCrustyground6
+    400024: canCrustyground7
+    400026: canWhole
+    400028: canWhole1
+    400030: canWhole2
+    400032: canWhole3
+    400034: canWhole4
+    400036: canWhole5
+    400038: //RootNode
+    400040: pCube1
+    2100000: canWholeLambert
+    2100002: canGroundLambert
+    2100004: canCrustyLambert
+    2100006: lambert1
+    2300000: canCrusty
+    2300002: canCrusty1
+    2300004: canCrusty2
+    2300006: canCrusty3
+    2300008: canCrustyground 1
+    2300010: canCrustyground1
+    2300012: canCrustyground2
+    2300014: canCrustyground3
+    2300016: canCrustyground4
+    2300018: canCrustyground5
+    2300020: canCrustyground6
+    2300022: canCrustyground7
+    2300024: canWhole
+    2300026: canWhole1
+    2300028: canWhole2
+    2300030: canWhole3
+    2300032: canWhole4
+    2300034: canWhole5
+    2300036: pCube1
+    3300000: canCrusty
+    3300002: canCrusty1
+    3300004: canCrusty2
+    3300006: canCrusty3
+    3300008: canCrustyground 1
+    3300010: canCrustyground1
+    3300012: canCrustyground2
+    3300014: canCrustyground3
+    3300016: canCrustyground4
+    3300018: canCrustyground5
+    3300020: canCrustyground6
+    3300022: canCrustyground7
+    3300024: canWhole
+    3300026: canWhole1
+    3300028: canWhole2
+    3300030: canWhole3
+    3300032: canWhole4
+    3300034: canWhole5
+    3300036: pCube1
+    4300000: canWhole
+    4300002: canCrustyground
+    4300004: canCrustyground1
+    4300006: canCrustyground2
+    4300008: canCrustyground3
+    4300010: canCrustyground4
+    4300012: canCrustyground5
+    4300014: canCrustyground6
+    4300016: canCrustyground7
+    4300018: canCrusty
+    4300020: pCube1
+    4300022: canCrusty1
+    4300024: canCrusty2
+    4300026: canWhole1
+    4300028: canWhole2
+    4300030: canWhole3
+    4300032: canWhole4
+    4300034: canCrusty3
+    4300036: canWhole5
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
