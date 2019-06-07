@@ -6,22 +6,27 @@ ModelImporter:
     100000: //RootNode
     100002: coffeemachineBody
     100004: coffeemachineKlepje
+    100006: coffeemachine 1
     400000: //RootNode
     400002: coffeemachineBody
     400004: coffeemachineKlepje
+    400006: coffeemachine 1
     2100000: coffeemachineLambert
     2300000: coffeemachineBody
     2300002: coffeemachineKlepje
+    2300004: coffeemachine 1
     3300000: coffeemachineBody
     3300002: coffeemachineKlepje
+    3300004: coffeemachine 1
     4300000: coffeemachineBody
     4300002: coffeemachineKlepje
+    4300004: coffeemachine
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: coffeemachineLambert
-    second: {fileID: 2100000, guid: e4d944137917c0b4db5b73b619274de5, type: 2}
+    second: {fileID: 2100000, guid: 91042ce4838a9b946a69903953c71694, type: 2}
   materials:
     importMaterials: 1
     materialName: 1

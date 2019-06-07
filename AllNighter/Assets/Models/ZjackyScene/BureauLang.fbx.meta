@@ -9,12 +9,13 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Bureau
+    4300002: BureauLang
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert1
-    second: {fileID: 2100000, guid: c772c0c80e250ab4db0cef35c1f84588, type: 2}
+    second: {fileID: 2100000, guid: 8a8c032df0c9e8e46b8b85ac2d30b44d, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
