@@ -64,6 +64,9 @@ public class PlayerMovement : MonoBehaviour
 
         rb.AddRelativeForce(movement * speed);
         rb.useGravity = true;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void PcMove()
@@ -77,6 +80,9 @@ public class PlayerMovement : MonoBehaviour
         RectTransform myCanvasRect = myCanvas.GetComponent<RectTransform>();
         RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvasRect, Input.mousePosition, myCanvas.worldCamera, out pos);
         rb.useGravity = false;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
         if(myCanvasRect.rect.Contains(pos))
         {
