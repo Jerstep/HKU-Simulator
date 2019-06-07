@@ -12,9 +12,14 @@ public class ObjectiveManager : MonoBehaviour
     public GameObject objective_UI;
     public GameObject objectives_UI;
 
-    public List<Objective> objectives;
+    public Objective[] availebleObjectives;
+    public List<Objective> activeObjectives;
 
     public int progress;
+
+    int objectiveIndex;
+    public float waitTimeToNextObjective;
+
 
     void Awake()
     {
@@ -23,19 +28,13 @@ public class ObjectiveManager : MonoBehaviour
         objectiveCanvas = FindObjectOfType<Canvas>();
     }
 
-    void OnGUI()
+    void NewObjective()
     {
-        foreach(var objective in objectives)
-        {
-            GameObject objective_UI_Instance = Instantiate(objective_UI);
-            objective_UI_Instance.transform.parent = objectives_UI.transform;
-            objective.DrawHUD(objective_UI_Instance);
-        }
     }
 
     void Update()
     {
-        foreach(Objective objective in objectives)
+        foreach(Objective objective in activeObjectives)
         {
             if(objective.IsAchieved())
             {
@@ -48,5 +47,19 @@ public class ObjectiveManager : MonoBehaviour
     public void addProgress(int addAmount)
     {
         progress =+ addAmount;
+    }
+
+    public IEnumerator AddNewObjective()
+    {
+        activeObjectives.Add(availebleObjectives[objectiveIndex]);
+
+        //GameObject objective_UI_Instance = Instantiate(objective_UI);
+        //objective_UI_Instance.transform.parent = objectives_UI.transform;
+        //objective.DrawHUD(objective_UI_Instance);
+
+        yield return new WaitForSeconds(waitTimeToNextObjective);
+        // Lowerst the time till next objective;
+        waitTimeToNextObjective -= (waitTimeToNextObjective / 90f);
+        objectiveIndex++;
     }
 }
