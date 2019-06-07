@@ -1,39 +1,20 @@
 fileFormatVersion: 2
-guid: aff70f320b5ed964a8deb4e3bbba06b3
+guid: 0a74eabaf07a0564384adfde9d692733
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: trashBody
-    100004: trashLid
-    100006: trash 1
     400000: //RootNode
-    400002: trashBody
-    400004: trashLid
-    400006: trash 1
     2100000: trashLambert
-    2300000: trashBody
-    2300002: trashLid
-    2300004: trash 1
-    2300006: //RootNode
-    3300000: trashBody
-    3300002: trashLid
-    3300004: trash 1
-    3300006: //RootNode
-    4300000: trashLid
-    4300002: trashBody
-    4300004: trash
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: trashLambert
-    second: {fileID: 2100000, guid: c92900c00ea393846b9fca85f6286fb8, type: 2}
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Object001
+  externalObjects: {}
   materials:
     importMaterials: 1
-    materialName: 1
-    materialSearch: 0
-    materialLocation: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
