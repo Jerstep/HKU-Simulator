@@ -15,9 +15,11 @@ ModelImporter:
     2300000: trashBody
     2300002: trashLid
     2300004: trash 1
+    2300006: //RootNode
     3300000: trashBody
     3300002: trashLid
     3300004: trash 1
+    3300006: //RootNode
     4300000: trashLid
     4300002: trashBody
     4300004: trash
