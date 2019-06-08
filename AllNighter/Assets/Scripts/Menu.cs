@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public string lvlToStart;
-    //public GameObject controlsScreen;
+    public GameObject controlsScreen, hubControls,codingControls,playtestControls;
 
     public void StartGame()
     {
@@ -15,8 +15,26 @@ public class Menu : MonoBehaviour
 
     public void Controls()
     {
-        //controlsScreen.SetActive(true);
+        controlsScreen.SetActive(true);
+        hubControls.SetActive(true);
+        codingControls.SetActive(false);
+        playtestControls.SetActive(false);
     }
+
+    public void CodingControls()
+    {
+        hubControls.SetActive(false);
+        codingControls.SetActive(true);
+        playtestControls.SetActive(false);
+    }
+
+    public void PlaytestControls()
+    {
+        hubControls.SetActive(false);
+        codingControls.SetActive(false);
+        playtestControls.SetActive(true);
+    }
+
 
     public void EndGame()
     {
@@ -25,6 +43,9 @@ public class Menu : MonoBehaviour
 
     public void Back()
     {
-        //controlsScreen.SetActive(false);
+        controlsScreen.SetActive(false);
+        hubControls.SetActive(false);
+        codingControls.SetActive(false);
+        playtestControls.SetActive(false);
     }
 }
