@@ -194,6 +194,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: platforming (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 654854807268208846, guid: 1d83faa4f6cbe1c418ce21586a2daf8a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 654854807268208849, guid: 1d83faa4f6cbe1c418ce21586a2daf8a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -895,6 +900,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rhythm
       objectReference: {fileID: 0}
+    - target: {fileID: 303174606675448850, guid: 30983218796717b47a1f7c39cbd17375,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1053793560826040728, guid: 30983218796717b47a1f7c39cbd17375,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -948,6 +958,11 @@ PrefabInstance:
     - target: {fileID: 1053793560826040728, guid: 30983218796717b47a1f7c39cbd17375,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129749850309705127, guid: 30983218796717b47a1f7c39cbd17375,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
