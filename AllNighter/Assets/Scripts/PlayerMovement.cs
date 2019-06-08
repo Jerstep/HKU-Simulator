@@ -63,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rb.AddRelativeForce(movement * speed);
-        rb.constraints = RigidbodyConstraints.None;
         rb.useGravity = true;
     }
 
@@ -75,9 +74,14 @@ public class PlayerMovement : MonoBehaviour
         this.transform.position = pcSnapPosition.position;
 
         Vector2 pos;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out pos);
-        cursor.transform.position = myCanvas.transform.TransformPoint(pos);
-        rb.constraints = RigidbodyConstraints.FreezePositionZ;
+        RectTransform myCanvasRect = myCanvas.GetComponent<RectTransform>();
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvasRect, Input.mousePosition, myCanvas.worldCamera, out pos);
         rb.useGravity = false;
+
+        if(myCanvasRect.rect.Contains(pos))
+        {
+            Debug.Log(pos);
+            cursor.transform.position = myCanvas.transform.TransformPoint(pos);
+        }
     }
 }
