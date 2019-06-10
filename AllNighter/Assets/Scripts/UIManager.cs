@@ -10,7 +10,6 @@ public class UIManager : MonoBehaviour
 
     public float time = 300;
 
-
     private GameManager gameMan;
     private ObjectiveManager objectMan;
 

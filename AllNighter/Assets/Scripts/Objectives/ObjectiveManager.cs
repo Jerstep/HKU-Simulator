@@ -12,14 +12,16 @@ public class ObjectiveManager : MonoBehaviour
     public GameObject objective_UI;
     public GameObject objectives_UI;
 
-    public Objective[] availebleObjectives;
+    [SerializeField]
+    private Objective[] availebleObjectives;
+
     public List<Objective> activeObjectives;
 
     public int progress;
 
-    int objectiveIndex;
+    int objectiveIndex = 0;
+    bool coroutineActive;
     public float waitTimeToNextObjective;
-
 
     void Awake()
     {
@@ -34,6 +36,11 @@ public class ObjectiveManager : MonoBehaviour
 
     void Update()
     {
+        if(objectiveIndex < availebleObjectives.Length && !coroutineActive && activeObjectives.Count < 5)
+        {
+            StartCoroutine(AddNewObjective());
+        }
+
         foreach(Objective objective in activeObjectives)
         {
             if(objective.IsAchieved())
@@ -53,13 +60,17 @@ public class ObjectiveManager : MonoBehaviour
     {
         activeObjectives.Add(availebleObjectives[objectiveIndex]);
 
-        //GameObject objective_UI_Instance = Instantiate(objective_UI);
-        //objective_UI_Instance.transform.parent = objectives_UI.transform;
-        //objective.DrawHUD(objective_UI_Instance);
-
-        yield return new WaitForSeconds(waitTimeToNextObjective);
-        // Lowerst the time till next objective;
+        GameObject objective_UI_Instance = Instantiate(objective_UI);
+        objective_UI_Instance.transform.SetParent(objectives_UI.transform);
+        objective_UI_Instance.transform.localScale = new Vector3(1, 1, 1);
+        activeObjectives[objectiveIndex].DrawHUD(objective_UI_Instance);
+        
+        // Lowers the time till next objective
         waitTimeToNextObjective -= (waitTimeToNextObjective / 90f);
         objectiveIndex++;
+
+        coroutineActive = true;
+        yield return new WaitForSeconds(waitTimeToNextObjective);
+        coroutineActive = false;
     }
 }

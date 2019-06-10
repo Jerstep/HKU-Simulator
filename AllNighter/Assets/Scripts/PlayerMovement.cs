@@ -34,12 +34,12 @@ public class PlayerMovement : MonoBehaviour
         if(!isBehindPc)
         {
             Move();
-            Debug.Log("Move Active");
+            //Debug.Log("Move Active");
         }            
         else
         {
             PcMove();
-            Debug.Log("PCMove Active");
+            //Debug.Log("PCMove Active");
         }
     }
 
@@ -75,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
         camera.transform.rotation = camPCPos.rotation;
 
         this.transform.position = pcSnapPosition.position;
+        this.transform.rotation = pcSnapPosition.rotation;
 
         Vector2 pos;
         RectTransform myCanvasRect = myCanvas.GetComponent<RectTransform>();
@@ -83,11 +84,5 @@ public class PlayerMovement : MonoBehaviour
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-
-        if(myCanvasRect.rect.Contains(pos))
-        {
-            Debug.Log(pos);
-            cursor.transform.position = myCanvas.transform.TransformPoint(pos);
-        }
     }
 }

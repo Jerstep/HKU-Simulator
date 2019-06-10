@@ -20,20 +20,40 @@ Material:
   - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - Texture2D_5BB0DC7A:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_E8CB7D36:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_14D632C: 0.1
     - Vector1_15B2FEB2: 1.3
     - Vector1_3457B1EC: 10
     - Vector1_3F3B3840: -0.52
+    - Vector1_4B76DC6E: 0
+    - Vector1_59923993: 0.6
+    - Vector1_61A2D183: -0.02
+    - Vector1_67E02D0C: 0
+    - Vector1_7F486F34: 0
     - Vector1_A6E9AC9: -1.69
+    - Vector1_A9BCC829: 2
     - Vector1_C293F614: 0.95
+    - Vector1_C38DA2E1: 1
     - Vector1_C857A77D: 0.41
     - Vector1_CA306195: 7.83
     - Vector1_D5C33FB: 1.7
+    - Vector1_D9462DF9: 1
     - Vector1_F008DFF0: 0.35
     - Vector1_F60D5241: 2
+    - Vector1_FD0F0C88: 0.2
     m_Colors:
     - Color_4A196F3D: {r: 0.009122463, g: 0.27897325, b: 0.38679248, a: 0}
+    - Color_67330AE8: {r: 0, g: 0, b: 0, a: 0}
+    - Color_DF9A59A9: {r: 0, g: 0, b: 0, a: 0}
     - Color_F7147BEB: {r: 0, g: 0.0031641477, b: 0.20754719, a: 0}
     - Vector2_26E369EC: {r: 0.83, g: 5.19, b: 0, a: 0}
     - Vector2_7535FD49: {r: 0.15, g: 0, b: 0, a: 0}
