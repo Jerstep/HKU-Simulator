@@ -14,6 +14,7 @@ TagManager:
   - KillBox
   - PC
   - Refill-PickUp
+  - SpeedEnemy
   layers:
   - Default
   - TransparentFX
@@ -48,6 +49,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: code
+    uniqueID: 116742893
+    locked: 0
   - name: Arrows
     uniqueID: 2478144179
     locked: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject bulletPrefab;
+    public GameObject bulletPrefab, energyPowerup;
     public Transform firePos1;
     public float waitTime;
 
@@ -33,5 +33,12 @@ public class Enemy : MonoBehaviour
         StopCoroutine(WaitTime());
         Instantiate(bulletPrefab, firePos1.position, firePos1.rotation);
         StartCoroutine(WaitTime());
+    }
+
+    public void Die()
+    {
+
+        Instantiate(energyPowerup, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
