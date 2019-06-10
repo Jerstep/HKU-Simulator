@@ -9,12 +9,13 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: coffeeCup
+    4300002: coffeecup
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: coffeecupLambert
-    second: {fileID: 2100000, guid: 32e803774177bcf44b88b954877678c9, type: 2}
+    second: {fileID: 2100000, guid: 5f194e96c3f197d46a57b320f7b5ad96, type: 2}
   materials:
     importMaterials: 1
     materialName: 1

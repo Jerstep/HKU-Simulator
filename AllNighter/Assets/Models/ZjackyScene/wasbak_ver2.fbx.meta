@@ -9,25 +9,30 @@ ModelImporter:
     100006: pCylinder33
     100008: wasbak 1
     100010: //RootNode
+    100012: wasbak_ver2
     400000: kraan4
     400002: pCylinder28
     400004: pCylinder32
     400006: pCylinder33
     400008: wasbak 1
     400010: //RootNode
+    400012: wasbak_ver2
     2100000: lambert1
     2300000: pCylinder28
     2300002: pCylinder32
     2300004: pCylinder33
     2300006: wasbak 1
+    2300008: wasbak_ver2
     3300000: pCylinder28
     3300002: pCylinder32
     3300004: pCylinder33
     3300006: wasbak 1
+    3300008: wasbak_ver2
     4300000: pCylinder32
     4300002: pCylinder28
     4300004: pCylinder33
     4300006: wasbak
+    4300008: wasbak_ver2
   externalObjects: {}
   materials:
     importMaterials: 1

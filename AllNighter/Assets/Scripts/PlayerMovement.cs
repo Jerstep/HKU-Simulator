@@ -34,12 +34,12 @@ public class PlayerMovement : MonoBehaviour
         if(!isBehindPc)
         {
             Move();
-            Debug.Log("Move Active");
+            //Debug.Log("Move Active");
         }            
         else
         {
             PcMove();
-            Debug.Log("PCMove Active");
+            //Debug.Log("PCMove Active");
         }
     }
 
@@ -64,6 +64,9 @@ public class PlayerMovement : MonoBehaviour
 
         rb.AddRelativeForce(movement * speed);
         rb.useGravity = true;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void PcMove()
@@ -72,16 +75,14 @@ public class PlayerMovement : MonoBehaviour
         camera.transform.rotation = camPCPos.rotation;
 
         this.transform.position = pcSnapPosition.position;
+        this.transform.rotation = pcSnapPosition.rotation;
 
         Vector2 pos;
         RectTransform myCanvasRect = myCanvas.GetComponent<RectTransform>();
         RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvasRect, Input.mousePosition, myCanvas.worldCamera, out pos);
         rb.useGravity = false;
 
-        if(myCanvasRect.rect.Contains(pos))
-        {
-            Debug.Log(pos);
-            cursor.transform.position = myCanvas.transform.TransformPoint(pos);
-        }
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }

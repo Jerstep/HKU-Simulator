@@ -12,31 +12,36 @@ public class ObjectiveManager : MonoBehaviour
     public GameObject objective_UI;
     public GameObject objectives_UI;
 
-    public Objective[] objectives;
+    [SerializeField]
+    private Objective[] availebleObjectives;
+
+    public List<Objective> activeObjectives;
 
     public int progress;
+
+    int objectiveIndex = 0;
+    bool coroutineActive;
+    public float waitTimeToNextObjective;
 
     void Awake()
     {
         //instance = this;
         gameManager = GetComponent<GameManager>();
-        objectives = GetComponents<Objective>();
         objectiveCanvas = FindObjectOfType<Canvas>();
     }
 
-    void OnGUI()
+    void NewObjective()
     {
-        foreach(var objective in objectives)
-        {
-            GameObject objective_UI_Instance = Instantiate(objective_UI);
-            objective_UI_Instance.transform.parent = objectives_UI.transform;
-            objective.DrawHUD(objective_UI_Instance);
-        }
     }
 
     void Update()
     {
-        foreach(var objective in objectives)
+        if(objectiveIndex < availebleObjectives.Length && !coroutineActive && activeObjectives.Count < 5)
+        {
+            StartCoroutine(AddNewObjective());
+        }
+
+        foreach(Objective objective in activeObjectives)
         {
             if(objective.IsAchieved())
             {
@@ -48,6 +53,24 @@ public class ObjectiveManager : MonoBehaviour
 
     public void addProgress(int addAmount)
     {
-        progress = +addAmount;
+        progress =+ addAmount;
+    }
+
+    public IEnumerator AddNewObjective()
+    {
+        activeObjectives.Add(availebleObjectives[objectiveIndex]);
+
+        GameObject objective_UI_Instance = Instantiate(objective_UI);
+        objective_UI_Instance.transform.SetParent(objectives_UI.transform);
+        objective_UI_Instance.transform.localScale = new Vector3(1, 1, 1);
+        activeObjectives[objectiveIndex].DrawHUD(objective_UI_Instance);
+        
+        // Lowers the time till next objective
+        waitTimeToNextObjective -= (waitTimeToNextObjective / 90f);
+        objectiveIndex++;
+
+        coroutineActive = true;
+        yield return new WaitForSeconds(waitTimeToNextObjective);
+        coroutineActive = false;
     }
 }

@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
   energy: 100
+  fullEnergy: 100
 --- !u!114 &3260072399337350177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,9 +189,12 @@ MonoBehaviour:
   objective_UI: {fileID: 1791271503106171044, guid: 53b45d70d2f6e404c9231091953e9016,
     type: 3}
   objectives_UI: {fileID: 0}
-  objectives:
-  - {fileID: 1860760825}
+  availebleObjectives:
+  - {fileID: 4992671546228944130, guid: de4034890661d824a9eaeee234c2e2af, type: 3}
+  - {fileID: 4992671546228944130, guid: 276cc229d9001c740baf66d823ba3cdc, type: 3}
+  activeObjectives: []
   progress: 0
+  waitTimeToNextObjective: 20
 --- !u!114 &1356966773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3623fd4f2c6996e4f9d29c6471dabaf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!114 &2347943920813620092
 MonoBehaviour:
   m_ObjectHideFlags: 0

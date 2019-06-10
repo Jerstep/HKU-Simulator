@@ -31,9 +31,7 @@ public class TimeManager : MonoBehaviour
     }
 
     void DisplayTime()
-    {
-
-       
+    {        
 
     }
 
@@ -43,7 +41,7 @@ public class TimeManager : MonoBehaviour
         yield return new WaitForSeconds(timeScale);
         if(canRotate)
         {
-            sun.transform.Rotate(xAngle, yAngle, zAngle);
+            //sun.transform.Rotate(xAngle, yAngle, zAngle);
             canRotate = false;
         }
         canRotate = false;
