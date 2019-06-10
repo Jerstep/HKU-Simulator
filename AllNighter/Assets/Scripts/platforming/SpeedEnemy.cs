@@ -8,8 +8,6 @@ public class SpeedEnemy : MonoBehaviour
     public bool moving;
     public float speed;
 
-    public GameObject energyPowerup;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,13 +31,6 @@ public class SpeedEnemy : MonoBehaviour
         {
             transform.Translate((Vector3.forward * speed) * Time.deltaTime);
         }
-    }
-
-    public void Die()
-    {
-
-        Instantiate(energyPowerup, transform.position, Quaternion.identity);
-        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -26,13 +26,7 @@ public class Bullet : MonoBehaviour
     {
         if(other.tag == "Enemy" && !enemyBullet)
         {
-            other.GetComponent<Enemy>().Die();
-            Destroy(gameObject);
-        }
-
-        if (other.tag == "SpeedEnemy" && !enemyBullet)
-        {
-            other.GetComponent<SpeedEnemy>().Die();
+            Destroy(other.gameObject);
             Destroy(gameObject);
         }
 
