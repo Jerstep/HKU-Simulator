@@ -88,7 +88,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3260072399337350182}
-  - component: {fileID: 3260072399337350179}
   - component: {fileID: 3260072399337350176}
   - component: {fileID: 3260072399337350177}
   - component: {fileID: 3260072399337350178}
@@ -117,18 +116,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3260072399337350179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3260072399337350183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 601c0262581c83249b25ddb0b5da326c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3260072399337350176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,8 +129,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 0}
+  interactionManager: {fileID: 0}
+  uiManager: {fileID: 0}
   energy: 100
   fullEnergy: 100
+  EnergyDepleationSpeed: 1
+  coffeeMeter: {fileID: 0}
+  coffeeDone: 0
+  makinCoffee: 0
+  coffeeCup: {fileID: 0}
 --- !u!114 &3260072399337350177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,13 +182,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objective_UI: {fileID: 1791271503106171044, guid: 53b45d70d2f6e404c9231091953e9016,
     type: 3}
-  objectives_UI: {fileID: 0}
+  objectives_UI: {fileID: 1791271503106171044, guid: 53b45d70d2f6e404c9231091953e9016,
+    type: 3}
   availebleObjectives:
+  - {fileID: 4992671546228944130, guid: de4034890661d824a9eaeee234c2e2af, type: 3}
+  - {fileID: 4992671546228944130, guid: 276cc229d9001c740baf66d823ba3cdc, type: 3}
+  - {fileID: 4992671546228944130, guid: de4034890661d824a9eaeee234c2e2af, type: 3}
+  - {fileID: 4992671546228944130, guid: 276cc229d9001c740baf66d823ba3cdc, type: 3}
   - {fileID: 4992671546228944130, guid: de4034890661d824a9eaeee234c2e2af, type: 3}
   - {fileID: 4992671546228944130, guid: 276cc229d9001c740baf66d823ba3cdc, type: 3}
   activeObjectives: []
   progress: 0
-  waitTimeToNextObjective: 20
+  waitTimeToNextObjective: 5
 --- !u!114 &1356966773
 MonoBehaviour:
   m_ObjectHideFlags: 0
