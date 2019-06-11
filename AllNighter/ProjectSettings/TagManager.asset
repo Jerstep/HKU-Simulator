@@ -15,6 +15,7 @@ TagManager:
   - PC
   - Refill-PickUp
   - Interactable
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -49,6 +50,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Backdrop
+    uniqueID: 3459187977
+    locked: 0
   - name: Arrows
     uniqueID: 2478144179
     locked: 0

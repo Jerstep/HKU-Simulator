@@ -26,6 +26,8 @@ public class RhythmGameManager : MonoBehaviour
     public float totalNotes;
     public float normalHits, goodHits, perfectHits, missedHits;
 
+    public bool finished;
+
     public GameObject resultsScreen, rhythemSection;
     public Text percentHitText, normalText, goodText, perfectText, missesText, rankText, finalScoreText;
 
@@ -58,7 +60,7 @@ public class RhythmGameManager : MonoBehaviour
         }
         else
         {
-            if (!theMusic.isPlaying && !resultsScreen.activeInHierarchy)
+            if (!theMusic.isPlaying && !resultsScreen.activeInHierarchy && !finished)
             {
                 resultsScreen.SetActive(true);
                 normalText.text = normalHits.ToString();
@@ -101,6 +103,8 @@ public class RhythmGameManager : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    finished = true;
+
                     if (rankVal == "F")
                     {
                         objectiveMan.addProgress(0);
