@@ -39,4 +39,9 @@ public class FinishPlatformer : Objective
         objectiveUIText[0].text = name;
         objectiveUIText[1].text = discription;
     }
+
+    public override void DrawButton(GameObject ButtonPrefab)
+    {
+        ButtonPrefab.SetActive(true);
+    }
 }

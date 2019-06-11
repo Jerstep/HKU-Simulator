@@ -7,9 +7,9 @@ public class ObjectiveManager : MonoBehaviour
     GameManager gameManager;
     UIManager uiManager;
 
-    private Canvas objectiveCanvas;
     public GameObject objective_UI;
     public GameObject objectives_UI;
+    public GameObject[] Buttons_UI;
 
     [SerializeField]
     private Objective[] availebleObjectives;
@@ -29,7 +29,6 @@ public class ObjectiveManager : MonoBehaviour
     {
         gameManager = GetComponent<GameManager>();
         uiManager = GetComponent<UIManager>();
-        objectiveCanvas = FindObjectOfType<Canvas>();
         NewObjective();
     }
 
@@ -80,5 +79,17 @@ public class ObjectiveManager : MonoBehaviour
     {
         progress += addAmount;
         Debug.Log(progress);
+    }
+
+    //This is going to be ugly but there is no time >~<
+    public void SetButtons(Objective objective)
+    {
+        for(int i = 0; i < Buttons_UI.Length -1; i++)
+        {
+            //if(objective.GetName() == Buttons_UI[i].)
+            //{
+
+            //}
+        }        
     }
 }

@@ -69,39 +69,99 @@ public class UIManager : MonoBehaviour
         endStats.GrabStatus();
     }
 
+    //#region Objective UI;
+    //public void OnButtonPress(Objective objective)
+    //{
+    //    renderToTextureImage.SetActive(true);
+    //    Debug.Log(objective.GetName());
+    //    // Check on button press what game to activate.
+    //    // Button gives an objective with an ID
+    //    if(objective.GetName() == "platformer1")
+    //    {
+    //        Debug.Log("Platformer 1");
+    //        platformerCam1.transform.gameObject.SetActive(true);
+    //        platformerPrefab1.SetActive(true);
+    //    }
+
+    //    if(objective.objectiveID == "platformer2")
+    //    {
+    //        platformerCam2.transform.gameObject.SetActive(true);
+    //        platformerPrefab2.SetActive(true);
+    //    }
+
+    //    if(objective.objectiveID == "platformer3")
+    //    {
+    //        platformerCam3.transform.gameObject.SetActive(true);
+    //        platformerPrefab3.SetActive(true);
+    //    }
+
+    //    if(objective.objectiveID == "RhythmGame1")
+    //    {
+    //        RythemGameCam1.transform.gameObject.SetActive(true);
+    //        RythemGamePrefab1.SetActive(true);
+    //    }
+
+    //    if(objective.objectiveID == "RhythmGame2")
+    //    {
+    //        RythemGameCam2.transform.gameObject.SetActive(true);
+    //        RythemGamePrefab2.SetActive(true);
+    //    }
+    //}
+
+    //public void SetMinigamesFalse()
+    //{
+    //    platformerCam1.transform.gameObject.SetActive(false);
+    //    platformerPrefab1.SetActive(false);
+
+    //    platformerCam2.transform.gameObject.SetActive(false);
+    //    platformerPrefab2.SetActive(false);
+
+    //    platformerCam3.transform.gameObject.SetActive(false);
+    //    platformerPrefab3.SetActive(false);
+
+    //    RythemGameCam1.transform.gameObject.SetActive(false);
+    //    RythemGamePrefab1.SetActive(false);
+
+    //    RythemGameCam2.transform.gameObject.SetActive(false);
+    //    RythemGamePrefab2.SetActive(false);
+
+    //    renderToTextureImage.SetActive(false);
+    //}
+    //#endregion 
+    
     #region Objective UI;
-    public void OnButtonPress(Objective objective)
+    public void OnButtonPress(string objective)
     {
         renderToTextureImage.SetActive(true);
-        Debug.Log(objective.GetName());
+        Debug.Log(objective);
         // Check on button press what game to activate.
         // Button gives an objective with an ID
-        if(objective.GetName() == "platformer1")
+        if(objective == "platformer1")
         {
             Debug.Log("Platformer 1");
             platformerCam1.transform.gameObject.SetActive(true);
             platformerPrefab1.SetActive(true);
         }
 
-        if(objective.objectiveID == "platformer2")
+        if(objective == "platformer2")
         {
             platformerCam2.transform.gameObject.SetActive(true);
             platformerPrefab2.SetActive(true);
         }
 
-        if(objective.objectiveID == "platformer3")
+        if(objective == "platformer3")
         {
             platformerCam3.transform.gameObject.SetActive(true);
             platformerPrefab3.SetActive(true);
         }
 
-        if(objective.objectiveID == "RythemGameCam1")
+        if(objective == "RhythmGame1")
         {
             RythemGameCam1.transform.gameObject.SetActive(true);
             RythemGamePrefab1.SetActive(true);
         }
 
-        if(objective.objectiveID == "RythemGameCam2")
+        if(objective == "RhythmGame2")
         {
             RythemGameCam2.transform.gameObject.SetActive(true);
             RythemGamePrefab2.SetActive(true);
