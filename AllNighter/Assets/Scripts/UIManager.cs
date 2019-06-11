@@ -9,15 +9,18 @@ public class UIManager : MonoBehaviour
     public Image energybar,progressbar;
 
     public float time = 300;
+    bool gameIsRunning = true;
 
     private GameManager gameMan;
     private ObjectiveManager objectMan;
+    private EndStats endStats;
 
     // Start is called before the first frame update
     void Start()
     {
         gameMan = GetComponent<GameManager>();
         objectMan = GetComponent<ObjectiveManager>();
+        endStats = GameObject.Find("Resultholder").GetComponent<EndStats>();
     }
 
     // Update is called once per frame
@@ -33,5 +36,15 @@ public class UIManager : MonoBehaviour
         progressbar.fillAmount = objectMan.progress / 100;
 
         timeValueText.text = timemin + ":" + timeSeconds;
+
+        if(time <= 0 && gameIsRunning)
+        {
+            toResults();
+        }
+    }
+
+    void toResults()
+    {
+        endStats.GrabStatus();
     }
 }

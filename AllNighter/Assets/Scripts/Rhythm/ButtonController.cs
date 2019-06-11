@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ButtonController : MonoBehaviour
 {
     private SpriteRenderer theSR;
     public Sprite defaultImage, pressedImage;
 
     public KeyCode keyToPress;
+
+    public AudioSource sound;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,7 @@ public class ButtonController : MonoBehaviour
     {
         if (Input.GetKeyDown(keyToPress))
         {
+            sound.Play();
             theSR.sprite = pressedImage;
         }
         if (Input.GetKeyUp(keyToPress))

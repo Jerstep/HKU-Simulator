@@ -20,15 +20,16 @@ public class RhythmGameManager : MonoBehaviour
     public int multiplierTracker;
     public int[] multiplierThreshold;
 
-    public Text scoreText,multiText;
+    public Text scoreText, multiText;
 
     public float totalNotes;
     public float normalHits, goodHits, perfectHits, missedHits;
 
-    public GameObject resultsScreen;
+    public GameObject resultsScreen, rhythemSection;
     public Text percentHitText, normalText, goodText, perfectText, missesText, rankText, finalScoreText;
 
     GameManager gameMan;
+    ObjectiveManager objectiveMan;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,8 @@ public class RhythmGameManager : MonoBehaviour
         instance = this;
         scoreText.text = "Score: " + 0;
         currentMultiplier = 1;
-        gameMan = GameObject.Find("GameManager").GetComponent <GameManager>();
+        gameMan = GameObject.Find("GameManager").GetComponent<GameManager>();
+        objectiveMan = GameObject.Find("GameManager").GetComponent<ObjectiveManager>();
         totalNotes = FindObjectsOfType<NoteObject>().Length;
     }
 
@@ -55,7 +57,7 @@ public class RhythmGameManager : MonoBehaviour
         }
         else
         {
-            if(!theMusic.isPlaying && !resultsScreen.activeInHierarchy)
+            if (!theMusic.isPlaying && !resultsScreen.activeInHierarchy)
             {
                 resultsScreen.SetActive(true);
                 normalText.text = normalHits.ToString();
@@ -70,10 +72,10 @@ public class RhythmGameManager : MonoBehaviour
 
                 string rankVal = "F";
 
-                if(percentHit > 40)
+                if (percentHit > 40)
                 {
                     rankVal = "D";
-                    if(percentHit > 55)
+                    if (percentHit > 55)
                     {
                         rankVal = "C";
                         if (percentHit > 70)
@@ -91,9 +93,40 @@ public class RhythmGameManager : MonoBehaviour
                     }
                 }
 
+
                 rankText.text = rankVal;
 
                 finalScoreText.text = currentScore.ToString();
+
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    if (rankVal == "F")
+                    {
+                        objectiveMan.addProgress(0);
+                    }
+                    else if (rankVal == "D")
+                    {
+                        objectiveMan.addProgress(5);
+                    }
+                    else if (rankVal == "C")
+                    {
+                        objectiveMan.addProgress(10);
+                    }
+                    else if (rankVal == "B")
+                    {
+                        objectiveMan.addProgress(15);
+                    }
+                    else if (rankVal == "A")
+                    {
+                        objectiveMan.addProgress(25);
+                    }
+                    else if (rankVal == "S")
+                    {
+                        objectiveMan.addProgress(26);
+                    }
+                    rhythemSection.SetActive(false);
+                }
+
             }
         }
     }
@@ -102,7 +135,7 @@ public class RhythmGameManager : MonoBehaviour
     {
         Debug.Log("Hit");
 
-        if(currentMultiplier - 1 < multiplierThreshold.Length)
+        if (currentMultiplier - 1 < multiplierThreshold.Length)
         {
             multiplierTracker++;
 

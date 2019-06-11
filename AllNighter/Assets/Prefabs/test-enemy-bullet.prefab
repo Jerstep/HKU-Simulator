@@ -124,3 +124,5 @@ MonoBehaviour:
   enemyBullet: 1
   speed: 10
   waitTime: 0.5
+  energyPickup: {fileID: 7636937110878659352, guid: 3cea5a1f9b4d85a4383ea8f02605dd46,
+    type: 3}

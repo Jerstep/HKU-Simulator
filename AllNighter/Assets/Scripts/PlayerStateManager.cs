@@ -15,21 +15,30 @@ public class PlayerStateManager : MonoBehaviour
 
     //Setting the singelton
     public static PlayerStateManager instance = null;
+    EndStats results;
 
     void Awake()
     {
-        if(instance == null)
+        
+        if (instance == null)
             instance = this;
     }
-
+    private void Start()
+    {
+        results = GameObject.Find("Resultholder").GetComponent<EndStats>();
+    }
     private void Update()
     {
         energy -= Time.deltaTime;
+        if(energy <= 0)
+        {
+            EnergyDepleted();
+        }
     }
 
     void EnergyDepleted()
     {
-
+        results.GrabStatus();
     }
 
 

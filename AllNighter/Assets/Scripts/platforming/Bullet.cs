@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public float speed;
     private Rigidbody RigidBullet;
     public float waitTime;
-
+    public GameObject energyPickup;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,7 @@ public class Bullet : MonoBehaviour
     {
         if(other.tag == "Enemy" && !enemyBullet)
         {
+            Instantiate(energyPickup, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
