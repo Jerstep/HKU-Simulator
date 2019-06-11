@@ -8,6 +8,7 @@ public class RhythmGameManager : MonoBehaviour
 
     public AudioSource theMusic;
     public bool startPlaying;
+    //public bool finishedGame = false;
     public BeatScroller theBS;
 
     public static RhythmGameManager instance;
@@ -124,6 +125,7 @@ public class RhythmGameManager : MonoBehaviour
                     {
                         objectiveMan.addProgress(26);
                     }
+                    objectiveMan.activeObjectives[objectiveMan.objectiveIndex].achieved = true;
                     rhythemSection.SetActive(false);
                 }
 

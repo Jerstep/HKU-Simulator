@@ -90,7 +90,7 @@ public class Collision : MonoBehaviour
         if (collision.tag == "EndPoint")
         {
             print("colission End");
-            objective.addProgress(20);
+            objective.addProgress(10);
             objectiveManager.activeObjectives[objectiveManager.objectiveIndex].achieved = true;
             //GetComponent<Movement>().platformingSection.SetActive(false);
         }

@@ -9,7 +9,7 @@ public class ResultsScreenManager : MonoBehaviour
     EndStats statsScript;
 
     public Text progressValue, RankValue;
-    public int progress;
+    public float progress;
 
 
     // Start is called before the first frame update

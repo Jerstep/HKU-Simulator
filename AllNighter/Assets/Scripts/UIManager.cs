@@ -54,6 +54,7 @@ public class UIManager : MonoBehaviour
 
         energybar.fillAmount = gameManager.energy / 100;
         progressbar.fillAmount = objectMan.progress / 100;
+        Debug.Log("Progress Bar" + progressbar.fillAmount);
 
         timeValueText.text = timemin + ":" + timeSeconds;
 

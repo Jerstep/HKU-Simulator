@@ -17,7 +17,7 @@ public class ObjectiveManager : MonoBehaviour
     public List<Objective> activeObjectives;
     public List<GameObject> UIObjectives;
 
-    public int progress;
+    public float progress;
 
     public int objectiveIndex = 0;
     bool coroutineActive;
@@ -78,6 +78,7 @@ public class ObjectiveManager : MonoBehaviour
 
     public void addProgress(int addAmount)
     {
-        progress =+ addAmount;
+        progress += addAmount;
+        Debug.Log(progress);
     }
 }

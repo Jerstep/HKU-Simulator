@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class FinishPlatformer : Objective
+public class FinishPlatformer3 : Objective
 {
     public new bool achieved = false;
 

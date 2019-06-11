@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EndStats : MonoBehaviour
 {
-    public int progress;
+    public float progress;
 
     private static bool statsExists;
 
