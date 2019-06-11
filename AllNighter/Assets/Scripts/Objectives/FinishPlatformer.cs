@@ -5,43 +5,39 @@ using TMPro;
 
 public class FinishPlatformer : Objective
 {
-    //Pure Testing
+    public new bool achieved = false;
 
-    public bool hasFinishedPlatformer = false;
-    public AudioClip trumpetSound;
+    public AudioClip finishSHound;
+    public AudioClip startSound;
 
     [Header("UI texts that shows up in game")]
-    public string objectiveName;
-    public string objectiveDiscription;
+    public string ID;
+    public string name;
+    public string discription;
 
-    ObjectiveManager objectiveManager;
+    //public ObjectiveManager objectiveManager;
 
     void Awake()
     {
-        objectiveManager = GetComponent<ObjectiveManager>();
+        GetComponent<AudioSource>().PlayOneShot(startSound);
     }
 
-    public override bool IsAchieved()
+    public override string GetName()
     {
-        return (hasFinishedPlatformer == true);
+        return ID;
     }
 
     public override void Complete()
     {
         objectiveManager.addProgress(20);
-        GetComponent<AudioSource>().PlayOneShot(trumpetSound);
+        GetComponent<AudioSource>().PlayOneShot(finishSHound);
     }
 
     public override void DrawHUD(GameObject objective_UI)
     {
         //GUILayout.Label(string.Format("Finished Cource {0}", hasFinishedPlatformer));
         TMP_Text[] objectiveUIText = objective_UI.GetComponentsInChildren<TMP_Text>();
-        objectiveUIText[0].text = objectiveName;
-        objectiveUIText[1].text = objectiveDiscription;
+        objectiveUIText[0].text = name;
+        objectiveUIText[1].text = discription;
     }
 }
-
-/* Finish the platformer:
- *  Got to your pc and playtest the game;
-  
- */

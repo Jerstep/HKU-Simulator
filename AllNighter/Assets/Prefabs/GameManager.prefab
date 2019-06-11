@@ -74,11 +74,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617562cde16a48347a3f55cd918b1461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasFinishedPlatformer: 0
-  trumpetSound: {fileID: 0}
-  objectiveName: Get To Tha Choppa
-  objectiveDiscription: Get to your pc and klick that fucking button before you fucking
-    die boiiiiiiii!!! RUNNNN
+  objectiveManager: {fileID: 0}
+  achieved: 0
+  finishSHound: {fileID: 0}
+  startSound: {fileID: 0}
+  ID: 
+  name: 
+  discription: 
 --- !u!1 &3260072399337350183
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,8 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objective_UI: {fileID: 1791271503106171044, guid: 53b45d70d2f6e404c9231091953e9016,
     type: 3}
-  objectives_UI: {fileID: 1791271503106171044, guid: 53b45d70d2f6e404c9231091953e9016,
-    type: 3}
+  objectives_UI: {fileID: 0}
   availebleObjectives:
   - {fileID: 4992671546228944130, guid: de4034890661d824a9eaeee234c2e2af, type: 3}
   - {fileID: 4992671546228944130, guid: 276cc229d9001c740baf66d823ba3cdc, type: 3}
@@ -192,8 +193,11 @@ MonoBehaviour:
   - {fileID: 4992671546228944130, guid: de4034890661d824a9eaeee234c2e2af, type: 3}
   - {fileID: 4992671546228944130, guid: 276cc229d9001c740baf66d823ba3cdc, type: 3}
   activeObjectives: []
+  UIObjectives: []
   progress: 0
+  objectiveIndex: 0
   waitTimeToNextObjective: 5
+  objectiveDone: 0
 --- !u!114 &1356966773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,3 +227,14 @@ MonoBehaviour:
   energybar: {fileID: 0}
   progressbar: {fileID: 0}
   time: 300
+  platformerCam1: {fileID: 0}
+  platformerCam2: {fileID: 0}
+  platformerCam3: {fileID: 0}
+  RythemGameCam1: {fileID: 0}
+  RythemGameCam2: {fileID: 0}
+  platformerPrefab1: {fileID: 0}
+  platformerPrefab2: {fileID: 0}
+  platformerPrefab3: {fileID: 0}
+  RythemGamePrefab1: {fileID: 0}
+  RythemGamePrefab2: {fileID: 0}
+  renderToTextureImage: {fileID: 0}

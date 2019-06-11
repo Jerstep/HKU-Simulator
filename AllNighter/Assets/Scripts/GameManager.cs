@@ -33,20 +33,25 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        EnergyDepeation();
-        if(makinCoffee)
-        {
-            CoffeeMachine();
-        }
+        EnergyDepleation();
+        CheckEnergy();
+    }
 
+    #region EnergyManagment;
+    void CheckEnergy()
+    {
         if(energy > 100)
         {
             energy = 100;
         }
+
+        if(makinCoffee)
+        {
+            CoffeeMachine();
+        }
     }
 
-    #region EnergyManagment;
-    void EnergyDepeation()
+    void EnergyDepleation()
     {
         energy -= Time.deltaTime * EnergyDepleationSpeed;
     }

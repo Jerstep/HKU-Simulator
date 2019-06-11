@@ -26,12 +26,14 @@ public class Collision : MonoBehaviour
 
     ObjectiveManager objective;
     GameManager gameMan;
+    public ObjectiveManager objectiveManager;
 
     // Start is called before the first frame update
     void Start()
     {
         objective = GameObject.Find("GameManager").GetComponent<ObjectiveManager>();
         gameMan = GameObject.Find("GameManager").GetComponent<GameManager>();
+        objectiveManager = FindObjectOfType<ObjectiveManager>();
     }
 
     // Update is called once per frame
@@ -83,10 +85,14 @@ public class Collision : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+        print("colission");
+
         if (collision.tag == "EndPoint")
         {
-            objective.addProgress(10);
-            GetComponent<Movement>().platformingSection.SetActive(false);
+            print("colission End");
+            objective.addProgress(20);
+            objectiveManager.activeObjectives[objectiveManager.objectiveIndex].achieved = true;
+            //GetComponent<Movement>().platformingSection.SetActive(false);
         }
     }
 }
